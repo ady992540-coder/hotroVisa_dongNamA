@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <%- include('components/head') %>
+        <title>
+            <%= title %>
+        </title>
+</head>
+
+<body>
+    <header>
+        <%- include('components/header') %>
+    </header>
+
+    <main>
+        <!-- TRIZ Động: Chèn thông báo động -->
+        <style>
+            /* Thuật Linh Động Hóa (TRIZ 15): Dòng chảy màu sắc liên tục lôi kéo sự chú ý */
+            @keyframes panGradient {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                50% {
+                    background-position: 100% 50%;
+                }
+
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+
+            .moving-gradient-banner {
+                /* Dải màu: Vàng kem - Vàng ánh kim - Vàng cam - Vàng hoàng kim */
+                background: linear-gradient(270deg, #f4edca, #f8df81, #ffd700, #f8df81, #f4edca);
+                background-size: 400% 400%;
+                animation: panGradient 1s ease-in-out infinite;
+                text-align: center;
+                padding: 15px;
+                font-weight: bold;
+                font-family: sans-serif;
+                color: #2c3e50;
+                /* Xanh than sẫm chống chói */
+                border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+            }
+        </style>
+
+        <div class="moving-gradient-banner">
+
+            ​📍 Hỗ trợ trọn gói các nước:
+
+            <span class="fi fi-mm"></span> Myanmar |
+            <span class="fi fi-kh"></span> Campuchia |
+            <span class="fi fi-ph"></span> Philippines |
+            <span class="fi fi-th"></span> Thái Lan |
+            <span class="fi fi-my"></span> Malaysia |
+            <span class="fi fi-vn"></span> Việt Nam
+
+        </div>
+
+        <div class="moving-gradient-banner">
+            ✈️ Bạn muốn đi du lịch hay công tác mà ngại thủ tục rắc rối?
+        </div>
+
+        <div class="moving-gradient-banner">
+            🌟 Đã có chúng tôi lo từ A đến Z!
+        </div>
+
+
+        <div id="root">
+            <div class="wrap-homepage">
+                <div>
+                    <style>
+                        /* Thuật Chuyển sang chiều khác (TRIZ 17): Đưa Header từ phẳng 2D thành kính mờ 3D lơ lửng */
+                        .main-header {
+                            /* Gradient Xanh Đại dương Hoàng gia (Màu thẻ Privilege Thái Lan) */
+                            background: linear-gradient(135deg, rgba(11, 38, 84, 0.85) 0%, rgba(18, 55, 120, 0.8) 100%) !important;
+                            /* Thuật màng mỏng ảo ảnh (TRIZ 30): Tấm kính mờ làm mờ cảnh phía sau */
+                            backdrop-filter: blur(16px);
+                            -webkit-backdrop-filter: blur(16px);
+                            /* Viền đáy dát Vàng Hoàng Kim mỏng */
+                            border-bottom: 2px solid rgba(255, 215, 0, 0.4) !important;
+                            /* Bóng đổ tạo độ nổi 3D bồng bềnh */
+                            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+                            /* Thuật Đẳng thế: Giữ Header trôi dính trên trần khi lăn chuột */
+                            position: sticky !important;
+                            top: 0;
+                            z-index: 9999;
+                            transition: all 0.4s ease;
+                        }
+
+                        /* Phát sáng viền vàng thêm khi chuột lướt vào */
+                        .main-header:hover {
+                            background: linear-gradient(135deg, rgba(16, 50, 105, 0.9) 0%, rgba(22, 65, 140, 0.85) 100%) !important;
+                            border-bottom: 2px solid rgba(255, 215, 0, 0.8) !important;
+                            box-shadow: 0 10px 40px rgba(255, 215, 0, 0.2) !important;
+                        }
+                    </style>
+                    <div class="main-header">
+
+                        <div class="left-logo"><a href="https://t.me/travelagency9"><img alt="logo"
+                                    src="./_files/logo_viet_tron.png"></a><a class="txt-link-to-home"
+                                href="https://t.me/travelagency9">
+                                <div class="text-content">
+                                    <div class="txt-top">​[东南亚签证与机票服务 – 快速、可靠]<span></span></div>
+                                    <div class="txt-bottom"> & VÉ MÁY BAY ĐÔNG NAM Á – NHANH CHÓNG & UY TÍN
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div class="action-right-btn"><button type="button" class="ant-btn iconMenu"><svg width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path opacity="0.981" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3.39848 3.96094C9.11723 3.95312 14.836 3.96094 20.5547 3.98438C21.3771 4.30999 21.6036 4.8803 21.2344 5.69531C21.0563 5.92088 20.8297 6.06933 20.5547 6.14063C14.836 6.17189 9.11723 6.17189 3.39848 6.14063C2.72343 5.92397 2.44999 5.463 2.57817 4.75781C2.72392 4.35415 2.99736 4.08853 3.39848 3.96094Z"
+                                        fill="white"></path>
+                                    <path opacity="0.964" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3.49213 10.8516C9.14839 10.8437 14.8047 10.8516 20.4609 10.875C21.2399 11.0965 21.529 11.6044 21.3281 12.3984C21.156 12.8011 20.8513 13.0277 20.414 13.0781C14.789 13.1094 9.164 13.1094 3.539 13.0781C2.72642 12.8835 2.42174 12.3757 2.62494 11.5547C2.79598 11.1691 3.08505 10.9348 3.49213 10.8516Z"
+                                        fill="white"></path>
+                                    <path opacity="0.982" fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M3.35156 17.7891C9.10158 17.7812 14.8516 17.7891 20.6016 17.8125C21.2425 18.0551 21.5003 18.5161 21.375 19.1953C21.2377 19.5983 20.9642 19.8561 20.5547 19.9688C14.8359 20 9.11719 20 3.39844 19.9688C2.57606 19.6431 2.3495 19.0728 2.71875 18.2578C2.88654 18.0343 3.09748 17.878 3.35156 17.7891Z"
+                                        fill="white"></path>
+                                </svg></button>
+                            <div class="ant-dropdown-link iconFlag ant-dropdown-trigger dropdrop-icon is-have-border">
+                                <svg class="svg-inline--fa fa-globe fa-w-16" aria-hidden="true" data-prefix="fas"
+                                    data-icon="globe" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 496 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z">
+                                    </path>
+                                </svg><!-- <i class="fas fa-globe"></i> -->Tiếng Việt<svg
+                                    class="svg-inline--fa fa-chevron-down fa-w-14" aria-hidden="true" data-prefix="fas"
+                                    data-icon="chevron-down" role="img" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 448 512" data-fa-i2svg="">
+                                    <path fill="currentColor"
+                                        d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z">
+                                    </path>
+                                </svg><!-- <i class="fas fa-chevron-down"></i> -->
+                            </div><a
+                                class="ant-dropdown-link ant-dropdown-trigger dropdrop-icon is-have-border menuUserManual"><img
+                                    src="./_files/icon-manual.09b62aca.svg" alt="manual-icon">Hướng dẫn sử dụng
+                                <i aria-label="icon: down" class="anticon anticon-down" style="margin-left: 5px;"><svg
+                                        viewBox="64 64 896 896" focusable="false" class="" data-icon="down" width="1em"
+                                        height="1em" fill="currentColor" aria-hidden="true">
+                                        <path
+                                            d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+                                        </path>
+                                    </svg></i></a><a class="signin-btn no-border-right"
+                                href="https://t.me/travelagency9">Đăng nhập</a><a class="create-account-btn no-border"
+                                href="https://t.me/travelagency9">Tạo tài
+                                khoản</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="home-content">
+                    <style>
+                        .home-content {
+                            /* Thuật màng mỏng (TRIZ 30): Lớp kính trắng đục phủ lên ảnh nền gốc để chữ nổi lên */
+                            background-image: linear-gradient(rgba(235, 21, 21, 0.85), rgba(255, 255, 255, 0.95)), url('/static/media/home_content1_bg.75fb65c6.jpg');
+                            background-size: cover;
+                            background-position: center;
+                            /* Thuật đẳng thế (TRIZ 12): Nền đứng yên, chỉ có chữ trôi đi tạo cảm giác 3D diệu kỳ */
+                            background-attachment: fixed;
+                        }
+                    </style>
+                    <nav class="navbar">
+                        <div class="wrap-nav"><button type="button" class="ant-btn hide-icon"
+                                style="position: absolute;"><img src="./_files/arrow-btn.adf95280.svg" alt="hide-icon"
+                                    style="transform: rotate(270deg);"></button>
+                            <ul class="nav navbar-nav " style="margin-right: 0px;">
+                                <li><a class="menu-item"><img src="./_files/menu-1-inactive.058e5422.svg"
+                                            alt="menu-1"></a></li>
+                                <li><a class="menu-item"><img src="./_files/menu-2-inactive.3b67ab96.svg"
+                                            alt="menu-2"></a></li>
+                                <li><a class="menu-item"><img src="./_files/menu-3-inactive.8c98981b.svg"
+                                            alt="menu-3"></a></li>
+                                <li><a class="menu-item active"><img src="./_files/menu-4-inactive.22e76f97.svg"
+                                            alt="menu-4"></a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="element content-one"
+                        style="background-image: url(&quot;/static/media/home_content1_bg.75fb65c6.jpg&quot;);">
+                        <div class="container-boxed brand-wrapper text-center">
+                            <style>
+                                @keyframes logoFloating {
+                                    0% {
+                                        transform: translateY(0px);
+                                        box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+                                    }
+
+                                    50% {
+                                        transform: translateY(-15px);
+                                        box-shadow: 0 0 35px rgba(255, 215, 0, 1), 0 0 60px rgba(255, 140, 0, 0.8);
+                                    }
+
+                                    100% {
+                                        transform: translateY(0px);
+                                        box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+                                    }
+                                }
+
+                                .magic-glowing-logo {
+                                    border-radius: 50%;
+                                    /* Tròn xoe như quả bóng */
+                                    animation: logoFloating 1s ease-in-out infinite;
+                                    /* Lắc lư không ngừng nghỉ 3 giây 1 nhịp */
+                                    border: 3px solid #ffcc00;
+                                    /* Viền vàng hoàng gia */
+                                    transition: transform 0.01s;
+                                }
+
+                                .magic-glowing-logo:hover {
+                                    animation-play-state: paused;
+                                    /* Đưa chuột vào là ảnh đứng im cho khách nhìn */
+                                    transform: scale(1.1);
+                                    /* Phóng to lên xíu để chào khách */
+                                }
+                            </style>
+                            <a href="https://t.me/travelagency9" target="_blank" rel="noopener noreferrer">
+                                <img alt="logo" class="magic-glowing-logo" src="./_files/logo_viet_tron.png">
+                            </a>
+                            <h1>
+                                东南亚签证与机票服务 –
+                                快速、可靠 <br> Dịch vụ visa và hỗ trợ nhập
+                                cảnh Đông Nam Á
+                            </h1>
+                            <div> <a href="https://t.me/travelagency9" target="_blank" rel="noopener noreferrer">
+                                    <span>Telegram : @travelagency9</span>
+                                </a>
+                            </div>
+                            <div>
+                                <div class="ant-row" style="margin-left: -15px; margin-right: -15px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element content-two">
+                        <div class="container-boxed">
+                            <h2>Cách đăng ký trực tuyến</h2>
+                            <div class="wrap-step">
+                                <div class="step-manual">
+                                    <div class="step-item">
+                                        <div class="num"><span>1</span></div>
+                                        <div class="txt-des">
+                                            <p>Tạo tài khoản</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="num"><span>2</span></div>
+                                        <div class="txt-des">
+                                            <p>Điền vào mẫu đơn đăng ký</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="num"><span>3</span></div>
+                                        <div class="txt-des">
+                                            <p>Tải lên tài liệu hỗ trợ</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="num"><span>4</span></div>
+                                        <div class="txt-des">
+                                            <p>Thanh toán phí thị thực</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="num"><span>5</span></div>
+                                        <div class="txt-des">
+                                            <p>Chờ đợi</p>
+                                            <p>thị thực được xử lý</p>
+                                        </div>
+                                    </div>
+                                    <div class="step-item">
+                                        <div class="num"><span>6</span></div>
+                                        <div class="txt-des">
+                                            <p>Xác nhận e-Visa</p>
+                                            <p>tài liệu được gửi qua email</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element content-three">
+                        <div class="container-boxed">
+                            <h2>Câu hỏi thường gặp</h2>
+                            <div class="ant-tabs ant-tabs-top tab-pane-custom ant-tabs-line">
+                                <div role="tablist" class="ant-tabs-bar ant-tabs-top-bar" tabindex="0">
+                                    <div class="ant-tabs-nav-container"><span unselectable="unselectable"
+                                            class="ant-tabs-tab-prev ant-tabs-tab-btn-disabled"><span
+                                                class="ant-tabs-tab-prev-icon"><i aria-label="icon: left"
+                                                    class="anticon anticon-left ant-tabs-tab-prev-icon-target"><svg
+                                                        viewBox="64 64 896 896" focusable="false" class=""
+                                                        data-icon="left" width="1em" height="1em" fill="currentColor"
+                                                        aria-hidden="true">
+                                                        <path
+                                                            d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 0 0 0 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z">
+                                                        </path>
+                                                    </svg></i></span></span><span unselectable="unselectable"
+                                            class="ant-tabs-tab-next ant-tabs-tab-btn-disabled"><span
+                                                class="ant-tabs-tab-next-icon"><i aria-label="icon: right"
+                                                    class="anticon anticon-right ant-tabs-tab-next-icon-target"><svg
+                                                        viewBox="64 64 896 896" focusable="false" class=""
+                                                        data-icon="right" width="1em" height="1em" fill="currentColor"
+                                                        aria-hidden="true">
+                                                        <path
+                                                            d="M765.7 486.8L314.9 134.7A7.97 7.97 0 0 0 302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 0 0 0-50.4z">
+                                                        </path>
+                                                    </svg></i></span></span>
+                                        <div class="ant-tabs-nav-wrap">
+                                            <div class="ant-tabs-nav-scroll">
+                                                <div class="ant-tabs-nav ant-tabs-nav-animated">
+                                                    <div>
+                                                        <div role="tab" aria-disabled="false" aria-selected="true"
+                                                            class="ant-tabs-tab-active ant-tabs-tab">
+                                                            <div><img src="./_files/tab1-active.8c0ed85d.svg"
+                                                                    alt="visaimageactive">Tôi có cần thị thực du
+                                                                lịch
+                                                                không?</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ant-tabs-ink-bar ant-tabs-ink-bar-animated"
+                                                        style="display: block; transform: translate3d(10px, 0px, 0px); width: 1170px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div tabindex="0" role="presentation"
+                                    style="width: 0px; height: 0px; overflow: hidden; position: absolute;">
+                                </div>
+                                <div class="ant-tabs-content ant-tabs-content-animated ant-tabs-top-content"
+                                    style="margin-left: 0%;">
+                                    <div role="tabpanel" aria-hidden="false"
+                                        class="ant-tabs-tabpane ant-tabs-tabpane-active">
+                                        <div tabindex="0" role="presentation"
+                                            style="width: 0px; height: 0px; overflow: hidden; position: absolute;">
+                                        </div>
+                                        <div class="sub-content-one">
+                                            <form class="ant-form ant-form-horizontal">
+                                                <div class="input-wrapper with-text-warning"><label>Quốc
+                                                        gia/Vùng lãnh
+                                                        thổ của Hộ chiếu/Giấy tờ thông hành <span
+                                                            class="ant-form-item-required"></span></label>
+                                                    <div class="ant-row ant-form-item">
+                                                        <div class="ant-col ant-form-item-control-wrapper">
+                                                            <div class="ant-form-item-control"><span
+                                                                    class="ant-form-item-children">
+                                                                    <div id="passportHolderCode"
+                                                                        class="ant-select ant-select-enabled">
+                                                                        <div class="ant-select-selection
+            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true"
+                                                                            aria-controls="801eb45e-0981-40cb-e660-8db60cb4fd6d"
+                                                                            aria-expanded="false"
+                                                                            data-__meta="[object Object]"
+                                                                            data-__field="[object Object]" tabindex="0">
+                                                                            <div class="ant-select-selection__rendered">
+                                                                                <div unselectable="on"
+                                                                                    class="ant-select-selection__placeholder"
+                                                                                    style="display: block; user-select: none;">
+                                                                                    Chọn quốc gia/vùng lãnh thổ
+                                                                                    của Hộ
+                                                                                    chiếu/Giấy tờ thông hành của
+                                                                                    bạn
+                                                                                </div>
+                                                                                <div class="ant-select-search ant-select-search--inline"
+                                                                                    style="display: none;">
+                                                                                    <div
+                                                                                        class="ant-select-search__field__wrap">
+                                                                                        <input id="passportHolderCode"
+                                                                                            autocomplete="off"
+                                                                                            class="ant-select-search__field"
+                                                                                            value=""><span
+                                                                                            class="ant-select-search__field__mirror">&nbsp;</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div><span class="ant-select-arrow"
+                                                                                unselectable="on"
+                                                                                style="user-select: none;"><i
+                                                                                    aria-label="icon: down"
+                                                                                    class="anticon anticon-down ant-select-arrow-icon"><svg
+                                                                                        viewBox="64 64 896 896"
+                                                                                        focusable="false" class=""
+                                                                                        data-icon="down" width="1em"
+                                                                                        height="1em" fill="currentColor"
+                                                                                        aria-hidden="true">
+                                                                                        <path
+                                                                                            d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z">
+                                                                                        </path>
+                                                                                    </svg></i></span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="description-txt"><img
+                                                                            class="warning-icon"
+                                                                            src="./_files/icon-warning-txt.904f61b4.svg"
+                                                                            alt="warning-icon"><span>Một quốc
+                                                                            gia hoặc
+                                                                            quốc tịch có thể chỉ một quốc gia
+                                                                            hoặc vùng
+                                                                            lãnh thổ có thẩm quyền cấp hộ chiếu
+                                                                            riêng.
+                                                                            Trong trường hợp quốc tịch của người
+                                                                            nộp đơn
+                                                                            khác với quốc gia hoặc vùng lãnh thổ
+                                                                            cấp
+                                                                            giấy tờ thông hành của người nộp
+                                                                            đơn, có thể
+                                                                            cần phải xin thị thực du
+                                                                            lịch.</span></div>
+                                                                </span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="input-wrapper"><label>Thời gian dự kiến ở lại Thái
+                                                        Lan
+                                                        (Ngày) <span class="ant-form-item-required"></span></label>
+                                                    <div class="ant-row ant-form-item">
+                                                        <div class="ant-col ant-form-item-control-wrapper">
+                                                            <div class="ant-form-item-control"><span
+                                                                    class="ant-form-item-children"><input
+                                                                        class="ant-input form-inputstep-one"
+                                                                        placeholder="Nhập số ngày của bạn" maxlength="3"
+                                                                        pattern="^[0-9\s]+$" type="tel" id="title_other"
+                                                                        data-__meta="[object Object]"
+                                                                        data-__field="[object Object]" value=""></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="ant-row ant-form-item check-btn text-center">
+                                                    <div class="ant-col ant-form-item-control-wrapper">
+                                                        <div class="ant-form-item-control"><span
+                                                                class="ant-form-item-children"><button disabled=""
+                                                                    type="submit"
+                                                                    class="ant-btn ant-btn-primary"><span>Kiểm
+                                                                        tra</span></button></span></div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div tabindex="0" role="presentation"
+                                            style="width: 0px; height: 0px; overflow: hidden; position: absolute;">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div tabindex="0" role="presentation"
+                                    style="width: 0px; height: 0px; overflow: hidden; position: absolute;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="element content-four" style="background-color: rgb(242, 242, 242);">
+                        <div class="container-boxed">
+                            <h2>Loại Thị thực</h2>
+                            <div class="ant-row" style="margin: -7.5px;">
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/cat-diploma.e2088a4d.svg"
+                                                    alt="homepage.contentFour.visaTypes.diplomatic"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Ngoại giao &amp; Chính thức</p>
+                                                <p>Nhiệm vụ ngoại giao hoặc chính thức</p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/cat-tourist.1b1f503e.svg"
+                                                    alt="homepage.contentFour.visaTypes.tourist"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Du lịch</p>
+                                                <p>Du lịch, MICE, Điều trị y tế</p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/cat-transit.437718fa.svg"
+                                                    alt="homepage.contentFour.visaTypes.transit"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Quá cảnh</p>
+                                                <p>Quá cảnh, hoạt động thể thao, hoặc phi hành đoàn</p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/cat-business.9136beec.svg"
+                                                    alt="homepage.contentFour.visaTypes.business"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Công việc &amp; Kinh doanh</p>
+                                                <p>Việc làm hoặc Kinh doanh</p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/cat-immigrant-ed.ba03efe0.svg"
+                                                    alt="homepage.contentFour.visaTypes.studying"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Du học</p>
+                                                <p>Chuyến thăm học tập và đào tạo</p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/cat-immigrant-m.30de47ac.png"
+                                                    alt="homepage.contentFour.visaTypes.media"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Phương tiện truyền thông &amp; Đoàn làm phim</p>
+                                                <p>Phương tiện truyền thông và đoàn làm phim</p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/religious.bd1c7f69.svg"
+                                                    alt="homepage.contentFour.visaTypes.religious"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Hoạt động Tôn giáo</p>
+                                                <p>Hoạt động tôn giáo</p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/cat-immigrant-rs.214550ba.png"
+                                                    alt="homepage.contentFour.visaTypes.research"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Nghiên cứu &amp; Khoa học</p>
+                                                <p>Nghiên cứu hoặc khoa học</p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/cat-immigrant-o.19105c46.svg"
+                                                    alt="homepage.contentFour.visaTypes.family"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Cư trú cùng Gia đình</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/cat-long-stay.d0cfc9ae.svg"
+                                                    alt="homepage.contentFour.visaTypes.retirement"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Hưu trí</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/cat-courtesy.692e4c31.png"
+                                                    alt="homepage.contentFour.visaTypes.courtesy"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Lịch sự</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/hospital.3e86fc80.svg"
+                                                    alt="homepage.contentFour.visaTypes.medicalTreatment"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Điều trị y tế</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/smart2.7c666b2c.jpg"
+                                                    alt="homepage.contentFour.visaTypes.smart"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Thông minh</p>
+                                                <p>Tài năng, Nhà đầu tư, Giám đốc điều hành, Khởi nghiệp</p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/ltr.a753bf32.png"
+                                                    alt="homepage.contentFour.visaTypes.longTermResident"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Cư trú Dài hạn</p>
+                                                <p>Thị thực 10 năm cho cư dân dài hạn</p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img
+                                                    src="data:image/jpeg;base64,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"
+                                                    alt="homepage.contentFour.visaTypes.destinationThailand"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thị thực Điểm đến Thái Lan (DTV)</p>
+                                                <p>Làm việc từ xa và các hoạt động liên quan đến sức mạnh mềm
+                                                    của Thái
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/thailand-privilege-card.393fdb40.png"
+                                                    alt="homepage.contentFour.visaTypes.destinationThailandPrivilege"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Thẻ Thailand Privilege</p>
+                                                <p>Long term visa with more privileges</p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                                <div class="ant-col ant-col-md-24 ant-col-lg-8" style="padding: 7.5px;"><a
+                                        target="_blank" href="https://t.me/travelagency9">
+                                        <div class="card-wrapper">
+                                            <div class="image"><img src="./_files/etc.e66ad225.svg"
+                                                    alt="homepage.contentFour.visaTypes.other"
+                                                    style="width: 80px; height: 80px;"></div>
+                                            <div class="text-content">
+                                                <p>Các Thị thực Khác</p>
+                                                <p></p>
+                                            </div>
+                                        </div>
+                                    </a></div>
+                            </div>
+                            <div class="ant-row"> *Tất cả các đơn xin đều phải được phê duyệt và Đại sứ quán
+                                Hoàng gia
+                                Thái Lan hoặc Tổng Lãnh sự quán có thể yêu cầu phỏng vấn hoặc tài liệu bổ sung.
+                                Việc nộp
+                                đơn xin thị thực không nhất thiết có nghĩa là thị thực sẽ được cấp. Xin lưu ý
+                                rằng phí
+                                thị thực không được hoàn lại.</div>
+                        </div>
+                    </div>
+                    <div class="element content-five">
+                        <div class="footer-section">
+                            <div class="container-boxed ">
+                                <div class="footer-content">
+                                    <div class="ant-row" style="margin-left: -7.5px; margin-right: -7.5px;">
+                                        <div class="ant-col ant-col-md-10"
+                                            style="padding-left: 7.5px; padding-right: 7.5px;">
+                                            <div class="brand-section"><img class="logo" alt="logo"
+                                                    src="./_files/logo_viet_tron.png">
+                                                <div>
+                                                    <h3>MINISTRY OF FOREIGN AFFAIRS</h3>
+                                                    <p>443 Sri Ayudhya Road,Bangkok 10400 Thailand</p>
+                                                    <p>(+66) 2203-5000</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="ant-col ant-col-md-6"
+                                            style="padding-left: 7.5px; padding-right: 7.5px;">
+                                            <h3>THỰC ĐƠN</h3>
+                                            <ul>
+                                                <li><a class="menu-item">Trang chủ</a></li>
+                                                <li><a class="menu-item">Cách đăng ký trực tuyến</a></li>
+                                                <li><a class="menu-item">Câu hỏi thường gặp</a></li>
+                                                <li><a class="menu-item active">Loại Thị thực</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="ant-col ant-col-md-8"
+                                            style="padding-left: 7.5px; padding-right: 7.5px;">
+                                            <h3>TỔ CHỨC</h3>
+                                            <ul>
+                                                <li><a href="https://www.mfa.go.th/en/index" target="_blank"
+                                                        rel="noopener noreferrer" class="link-menu">Ministry of
+                                                        Foreign
+                                                        Affairs of Thailand</a></li>
+                                                <li><a href="https://www.immigration.go.th/" target="_blank"
+                                                        rel="noopener noreferrer" class="link-menu">Thai
+                                                        Immigration
+                                                        Bureau</a></li>
+                                                <li><a href="https://www.customs.go.th/" target="_blank"
+                                                        rel="noopener noreferrer" class="link-menu">Thai
+                                                        Customs</a>
+                                                </li>
+                                                <li><a href="https://www.airportthai.co.th/en/" target="_blank"
+                                                        rel="noopener noreferrer" class="link-menu">Airport
+                                                        Authority of
+                                                        Thailand (AOT)</a></li>
+                                                <li><a href="https://www.tourismthailand.org/landing" target="_blank"
+                                                        rel="noopener noreferrer" class="link-menu">Tourism Authority of
+                                                        Thailand</a></li>
+                                                <li><a href="https://www.boi.go.th/index.php?page=index" target="_blank"
+                                                        rel="noopener noreferrer" class="link-menu">Board of Investment
+                                                        (BOI)</a></li>
+                                                <li><a href="https://www.businesseventsthailand.com/en" target="_blank"
+                                                        rel="noopener noreferrer" class="link-menu">MICE industry</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">©© 2020 Bộ Ngoại giao Thái Lan. Bảo lưu mọi quyền. Phiên
+                            bản&nbsp;12F.02.07&nbsp;(Hình ảnh trên trang web này thuộc bản quyền của Tổng cục Du
+                            lịch
+                            Thái Lan)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modal"></div>
+        <script>!function (e) { function t(t) { for (var n, i, l = t[0], a = t[1], p = t[2], c = 0, s = []; c < l.length; c++)i = l[c], Object.prototype.hasOwnProperty.call(o, i) && o[i] && s.push(o[i][0]), o[i] = 0; for (n in a) Object.prototype.hasOwnProperty.call(a, n) && (e[n] = a[n]); for (f && f(t); s.length;)s.shift()(); return u.push.apply(u, p || []), r() } function r() { for (var e, t = 0; t < u.length; t++) { for (var r = u[t], n = !0, l = 1; l < r.length; l++) { var a = r[l]; 0 !== o[a] && (n = !1) } n && (u.splice(t--, 1), e = i(i.s = r[0])) } return e } var n = {}, o = { 1: 0 }, u = []; function i(t) { if (n[t]) return n[t].exports; var r = n[t] = { i: t, l: !1, exports: {} }; return e[t].call(r.exports, r, r.exports, i), r.l = !0, r.exports } i.m = e, i.c = n, i.d = function (e, t, r) { i.o(e, t) || Object.defineProperty(e, t, { enumerable: !0, get: r }) }, i.r = function (e) { "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }), Object.defineProperty(e, "__esModule", { value: !0 }) }, i.t = function (e, t) { if (1 & t && (e = i(e)), 8 & t) return e; if (4 & t && "object" == typeof e && e && e.__esModule) return e; var r = Object.create(null); if (i.r(r), Object.defineProperty(r, "default", { enumerable: !0, value: e }), 2 & t && "string" != typeof e) for (var n in e) i.d(r, n, function (t) { return e[t] }.bind(null, n)); return r }, i.n = function (e) { var t = e && e.__esModule ? function () { return e.default } : function () { return e }; return i.d(t, "a", t), t }, i.o = function (e, t) { return Object.prototype.hasOwnProperty.call(e, t) }, i.p = "/"; var l = this["webpackJsonpe-application-front"] = this["webpackJsonpe-application-front"] || [], a = l.push.bind(l); l.push = t, l = l.slice(); for (var p = 0; p < l.length; p++)t(l[p]); var f = a; r() }([])</script>
+        <script></script>
+        <script></script><veepn-lock-screen><template shadowrootmode="open">
+                <style>
+                    html {
+                        box-sizing: border-box;
+                        text-size-adjust: 100%;
+                        word-break: normal;
+                        tab-size: 4
+                    }
+
+                    *,
+                    :before,
+                    :after {
+                        background-repeat: no-repeat;
+                        box-sizing: border-box
+                    }
+
+                    :before,
+                    :after {
+                        text-decoration: inherit;
+                        vertical-align: inherit
+                    }
+
+                    * {
+                        padding: 0;
+                        margin: 0
+                    }
+
+                    hr {
+                        overflow: visible;
+                        height: 0;
+                        color: inherit;
+                        border: 0;
+                        border-top: 1px solid
+                    }
+
+                    details,
+                    main {
+                        display: block
+                    }
+
+                    summary {
+                        display: list-item
+                    }
+
+                    small {
+                        font-size: 80%
+                    }
+
+                    [hidden] {
+                        display: none !important
+                    }
+
+                    abbr[title] {
+                        border-bottom: none;
+                        text-decoration: underline;
+                        text-decoration: underline dotted
+                    }
+
+                    a {
+                        background-color: transparent
+                    }
+
+                    a:active,
+                    a:hover {
+                        outline-width: 0
+                    }
+
+                    code,
+                    kbd,
+                    pre,
+                    samp {
+                        font-family: monospace
+                    }
+
+                    pre {
+                        font-size: 1em
+                    }
+
+                    b,
+                    strong {
+                        font-weight: bolder
+                    }
+
+                    sub,
+                    sup {
+                        font-size: 75%;
+                        line-height: 0;
+                        position: relative;
+                        vertical-align: baseline
+                    }
+
+                    sub {
+                        bottom: -.25em
+                    }
+
+                    sup {
+                        top: -.5em
+                    }
+
+                    table {
+                        border-color: inherit;
+                        text-indent: 0
+                    }
+
+                    iframe {
+                        border-style: none
+                    }
+
+                    input {
+                        border-radius: 0
+                    }
+
+                    [type=number]::-webkit-inner-spin-button,
+                    [type=number]::-webkit-outer-spin-button {
+                        height: auto
+                    }
+
+                    [type=search] {
+                        appearance: textfield;
+                        outline-offset: -2px
+                    }
+
+                    [type=search]::-webkit-search-decoration {
+                        appearance: none
+                    }
+
+                    textarea {
+                        overflow: auto;
+                        resize: vertical
+                    }
+
+                    button,
+                    input,
+                    optgroup,
+                    select,
+                    textarea {
+                        font: inherit;
+                        color: inherit
+                    }
+
+                    optgroup {
+                        font-weight: 700
+                    }
+
+                    button {
+                        overflow: visible
+                    }
+
+                    button,
+                    select {
+                        text-transform: none
+                    }
+
+                    button,
+                    [type=button],
+                    [type=reset],
+                    [type=submit],
+                    [role=button] {
+                        cursor: pointer
+                    }
+
+                    button::-moz-focus-inner,
+                    [type=button]::-moz-focus-inner,
+                    [type=reset]::-moz-focus-inner,
+                    [type=submit]::-moz-focus-inner {
+                        border-style: none;
+                        padding: 0
+                    }
+
+                    button,
+                    html [type=button],
+                    [type=reset],
+                    [type=submit] {
+                        appearance: auto
+                    }
+
+                    button,
+                    input,
+                    select,
+                    textarea {
+                        background-color: transparent;
+                        border-style: none
+                    }
+
+                    button:-moz-focusring,
+                    [type=button]::-moz-focus-inner,
+                    [type=reset]::-moz-focus-inner,
+                    [type=submit]::-moz-focus-inner {
+                        outline: 1px dotted ButtonText
+                    }
+
+                    select {
+                        appearance: none
+                    }
+
+                    a:focus,
+                    button:focus,
+                    input:focus,
+                    select:focus,
+                    textarea:focus {
+                        outline-width: 0
+                    }
+
+                    select::-ms-expand {
+                        display: none
+                    }
+
+                    select::-ms-value {
+                        color: currentcolor
+                    }
+
+                    legend {
+                        border: 0;
+                        color: inherit;
+                        display: table;
+                        white-space: normal;
+                        max-width: 100%
+                    }
+
+                    ::-webkit-file-upload-button {
+                        appearance: auto;
+                        color: inherit;
+                        font: inherit
+                    }
+
+                    [disabled] {
+                        cursor: default
+                    }
+
+                    img {
+                        border-style: none
+                    }
+
+                    progress {
+                        vertical-align: baseline
+                    }
+
+                    [aria-busy=true] {
+                        cursor: progress
+                    }
+
+                    [aria-controls] {
+                        cursor: pointer
+                    }
+
+                    [aria-disabled=true] {
+                        cursor: default
+                    }
+
+                    ul,
+                    ol {
+                        list-style-type: none
+                    }
+
+                    figure {
+                        margin: 0
+                    }
+
+                    @keyframes slide-in {
+                        0% {
+                            opacity: 0;
+                            transform: translateY(16px)
+                        }
+
+                        to {
+                            opacity: 1;
+                            transform: translateY(0)
+                        }
+                    }
+
+                    .gradient-blue {
+                        background: radial-gradient(106.41% 128.47% at 50.15% 128.47%, #23abff, #3066ff)
+                    }
+
+                    .gradient-green {
+                        background: radial-gradient(92.26% 118.88% at 50.15% .13%, #00c3c3, #00aab3)
+                    }
+
+                    .gradient-purple {
+                        background: radial-gradient(165.12% 115.56% at 50.15% .13%, #a15aff, #00a0eb)
+                    }
+
+                    .bg-blue {
+                        background-color: #f2f5ff
+                    }
+
+                    .bg-purple {
+                        background-color: #f7f0ff
+                    }
+
+                    .bg-green {
+                        background-color: #ebffed
+                    }
+
+                    .lock-screen {
+                        font-family: FigtreeVF, sans-serif;
+                        letter-spacing: normal;
+                        position: fixed;
+                        z-index: 2147483638;
+                        right: 24px;
+                        bottom: 24px;
+                        width: 327px;
+                        border-radius: 24px;
+                        overflow: hidden;
+                        box-shadow: 0 24px 32px #00000014;
+                        animation: slide-in .3s ease-in-out forwards
+                    }
+
+                    .lock-screen__content {
+                        position: relative;
+                        padding: 24px 24px 64px
+                    }
+
+                    .lock-screen__close {
+                        position: absolute;
+                        top: 16px;
+                        right: 16px;
+                        width: 24px;
+                        height: 24px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: .5
+                    }
+
+                    .lock-screen__label {
+                        height: 26px;
+                        width: fit-content;
+                        border-radius: 50px;
+                        background-color: #fff3;
+                        padding-inline: 16px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 8px;
+                        color: #fff;
+                        font-size: 12px;
+                        line-height: 18px;
+                        margin: -8px auto 16px
+                    }
+
+                    .lock-screen__title {
+                        color: #fff;
+                        text-align: center;
+                        font-size: 20px;
+                        line-height: 28px;
+                        font-weight: 600;
+                        margin-bottom: 8px
+                    }
+
+                    .lock-screen__description {
+                        color: #f5f6f7;
+                        text-align: center;
+                        font-size: 14px;
+                        line-height: 20px
+                    }
+
+                    .lock-screen__description b {
+                        font-weight: 600
+                    }
+
+                    .lock-screen__card {
+                        position: relative;
+                        z-index: 1;
+                        margin-top: -44px;
+                        background-color: #fff;
+                        border-radius: 24px;
+                        padding: 32px 20px 20px
+                    }
+
+                    .lock-screen__inner {
+                        margin-bottom: 24px
+                    }
+
+                    .lock-screen__submit {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        height: 40px;
+                        width: 100%;
+                        border-radius: 12px;
+                        padding-inline: 16px;
+                        background-color: #f70;
+                        color: #fff;
+                        margin-bottom: 16px
+                    }
+
+                    .lock-screen__skip {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 14px;
+                        line-height: 20px;
+                        color: #82829c;
+                        margin-inline: auto
+                    }
+
+                    .price-card {
+                        border: 1px solid #f2f2fc;
+                        background: linear-gradient(254.14deg, #fafbff .04%, #f5f8ff 100.04%);
+                        border-radius: 24px;
+                        padding: 24px 28px
+                    }
+
+                    .price-card__label {
+                        color: #4a5764;
+                        text-align: center;
+                        font-size: 14px;
+                        line-height: 20px;
+                        text-transform: uppercase;
+                        margin-bottom: 16px
+                    }
+
+                    .price-card__price {
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        column-gap: 2px;
+                        margin-bottom: 12px
+                    }
+
+                    .price-card__currency {
+                        color: #515478;
+                        font-size: 18px;
+                        line-height: 28px
+                    }
+
+                    .price-card__number {
+                        color: #14142a;
+                        text-align: center;
+                        font-size: 64px;
+                        line-height: 54px
+                    }
+
+                    .price-card__wrap {
+                        display: flex;
+                        flex-direction: column
+                    }
+
+                    .price-card__decimal {
+                        color: #515478;
+                        font-size: 18px;
+                        line-height: 28px;
+                        font-weight: 600
+                    }
+
+                    .price-card__period {
+                        color: #515478;
+                        font-size: 14px;
+                        line-height: 20px;
+                        margin-top: -6px
+                    }
+
+                    .price-card__discount {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom: 12px
+                    }
+
+                    .price-card__discount-divider {
+                        position: absolute;
+                        z-index: 0;
+                        top: 50%;
+                        left: 0;
+                        width: 100%;
+                        height: 1px;
+                        background-color: #dbe2f9;
+                        transform: translateY(-50%)
+                    }
+
+                    .price-card__discount-icon {
+                        position: absolute;
+                        z-index: 1;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%)
+                    }
+
+                    .price-card__discount-text {
+                        position: relative;
+                        z-index: 2;
+                        color: #fff;
+                        font-size: 12px;
+                        font-weight: 600;
+                        line-height: 18px
+                    }
+
+                    .price-card__features {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        column-gap: 16px
+                    }
+
+                    .price-card__feature {
+                        color: #222e3a;
+                        font-size: 14px;
+                        line-height: 20px;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px
+                    }
+
+                    .price-card__feature:before {
+                        content: "";
+                        display: block;
+                        width: 4px;
+                        height: 4px;
+                        background-color: #20df9e;
+                        border-radius: 50%;
+                        flex-shrink: 0
+                    }
+
+                    .features-list {
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        gap: 12px
+                    }
+
+                    .features-list__item {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 6px
+                    }
+
+                    .features-list__icon {
+                        width: 52px;
+                        height: 52px;
+                        border-radius: 12px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center
+                    }
+
+                    .features-list__text {
+                        color: #293a53;
+                        text-align: center;
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: -.1px
+                    }
+                </style>
+            </template>
+            <style>
+                @font-face {
+                    font-family: FigtreeVF;
+                    src: url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2 supports variations"), url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) format("woff2-variations");
+                    font-weight: 100 1000;
+                    font-display: swap
+                }
+            </style>
+        </veepn-lock-screen>
+        <style>
+            [ant-click-animating-without-extra-node='true']::after,
+            .ant-click-animating-node {
+                --antd-wave-shadow-color: rgb(60, 165, 252);
+            }
+        </style>
+        <div style="position: absolute; top: 0px; left: 0px; width: 100%;">
+            <div>
+                <div class="ant-tooltip  ant-tooltip-placement-left  ant-tooltip-hidden"
+                    style="left: 1102px; top: 2404.86px; transform-origin: 112.554px 50%;">
+                    <div class="ant-tooltip-content">
+                        <div class="ant-tooltip-arrow"></div>
+                        <div class="ant-tooltip-inner" role="tooltip">Visa Category</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; top: 0px; left: 0px; width: 100%;">
+            <div>
+                <div class="ant-dropdown  ant-dropdown-placement-bottomLeft  ant-dropdown-hidden"
+                    style="left: 688px; top: 1907px;">
+                    <ul class="ant-dropdown-menu dropdown-manual dropdownFlag ant-dropdown-menu-light ant-dropdown-menu-root ant-dropdown-menu-vertical"
+                        role="menu" tabindex="0">
+                        <li id="en" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">English</button></li>
+                        <li id="ar" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">العربية</button></li>
+                        <li id="cns" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">简体中文</button></li>
+                        <li id="cnt" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">繁體中文</button></li>
+                        <li id="bm" class="ant-dropdown-menu-item" role="menuitem"><button class="buttonFlag">Bahasa
+                                Melayu</button></li>
+                        <li id="fr" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">Français</button></li>
+                        <li id="gm" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">Deutsch</button></li>
+                        <li id="jp" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">日本語</button></li>
+                        <li id="km" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">ភាសាខ្មែរ</button></li>
+                        <li id="kor" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">한국어</button></li>
+                        <li id="lao" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">ພາສາລາວ</button></li>
+                        <li id="ml" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">မြန်မာ</button></li>
+                        <li id="ru" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">Русский</button></li>
+                        <li id="sp" class="ant-dropdown-menu-item" role="menuitem"><button
+                                class="buttonFlag">Español</button></li>
+                        <li id="vn" class="ant-dropdown-menu-item" role="menuitem"><button class="buttonFlag">Tiếng
+                                Việt</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; top: 0px; left: 0px; width: 100%;">
+            <div>
+                <div class="ant-tooltip  ant-tooltip-placement-left  ant-tooltip-hidden"
+                    style="left: 1163px; top: 2344.86px; transform-origin: 51.9464px 50%;">
+                    <div class="ant-tooltip-content">
+                        <div class="ant-tooltip-arrow"></div>
+                        <div class="ant-tooltip-inner" role="tooltip">FAQ</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <%- include('components/footer') %>
+    </footer>
+</body>
+
+</html>
