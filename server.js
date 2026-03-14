@@ -10,9 +10,9 @@ app.set('views', path.join(__dirname, 'views'));
 // TRIZ 24: Trung gian - Phục vụ file tĩnh từ thư mục public
 app.use('/assets', express.static(path.join(__dirname, 'public/assets')));
 // Ánh xạ trực tiếp thư mục chứa tài nguyên gốc để không vỡ layout
-app.use('/_files', express.static(path.join(__dirname, '..', 'Official Website of Thailand Electronic Visa_files')));
+app.use('/_files', express.static(path.join(__dirname, 'Official Website of Thailand Electronic Visa_files')));
 // TRIZ 17: Chuyển sang chiều khác (Tạo Cánh Cửa Không Gian ảo cho Ảnh Mèo)
-app.use('/static/media', express.static(path.join(__dirname, '..', 'Official Website of Thailand Electronic Visa_files')));
+app.use('/static/media', express.static(path.join(__dirname, 'Official Website of Thailand Electronic Visa_files')));
 
 // Route trang chủ
 app.get('/', (req, res) => {
